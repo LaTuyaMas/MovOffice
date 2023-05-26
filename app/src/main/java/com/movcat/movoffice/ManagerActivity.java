@@ -68,7 +68,7 @@ public class ManagerActivity extends AppCompatActivity {
         });
 
         String gameId = getIntent().getStringExtra(Constants.gameKey);
-        if (gameId.isEmpty()) {
+        if (gameId == null) {
             isEdit = false;
         }
         else {
