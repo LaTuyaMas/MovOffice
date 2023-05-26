@@ -89,6 +89,15 @@ public class GameViewActivity extends AppCompatActivity {
                     confirmDeletion().show();
                 }
             });
+
+            binding.contentGame.btnEditView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(GameViewActivity.this, ManagerActivity.class);
+                    intent.putExtra(Constants.gameKey, viewGame.getId());
+                    startActivity(intent);
+                }
+            });
         }
     }
 
